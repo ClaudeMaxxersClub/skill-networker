@@ -1,0 +1,46 @@
+# Networker runtime configuration template
+#
+# First-time setup:
+#   cp config.template.yaml config.yaml
+#   edit config.yaml with your real paths and notification preferences
+#
+# config.yaml is gitignored and never pushed to the collective.
+
+# Directory where dossiers are saved.
+# Filename pattern: {lastname}-{company}.md (lowercased)
+output_dir: "~/Documents/person-intel/"
+
+# Local paths the skill grep-searches in Phase 2 Agent 4 (Local Knowledge Base).
+# Add any directories that contain your CRM exports, pipeline notes, dossier
+# archive, email exports, customer reports, meeting notes, or other context
+# that might reveal an existing relationship with the target.
+#
+# Leave empty to disable Agent 4 (the dossier will flag "no internal intel").
+local_search_paths:
+  - "~/Documents/person-intel/"    # prior dossiers from this skill
+  # - "~/Documents/crm-exports/"
+  # - "~/Documents/pipeline/"
+  # - "~/Documents/email-export/"
+  # - "~/knowledge-base/"
+  # - "~/Obsidian-vault/"
+
+# Notification settings for Phase 3 Step 5.
+# Set type to "none" to skip notifications entirely.
+notification:
+  type: "none"   # one of: telegram, slack, none
+
+  telegram:
+    # Create a bot via @BotFather, get the token, then send it a message
+    # and fetch your chat_id from https://api.telegram.org/bot<TOKEN>/getUpdates
+    bot_token: ""
+    chat_id: ""
+
+  slack:
+    # Create an incoming webhook at https://api.slack.com/messaging/webhooks
+    webhook_url: ""
+
+# Optional: Google Drive upload (if you have the Google Drive MCP configured).
+# Leave false unless you have it set up and want dossiers mirrored to Drive.
+drive_upload:
+  enabled: false
+  folder_name: "person-intel"

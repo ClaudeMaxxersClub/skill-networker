@@ -1,0 +1,27 @@
+# ClaudeMaxxersClub / skill-networker — gitignore
+#
+# Rule: framework gets committed, user-specific CONTEXT stays local.
+# Everything here is designed to keep private user data out of the
+# shared canon while still letting the skill run locally against
+# populated files.
+
+# Private library content (user-specific profile and warm network notes).
+# Templates and the README are committed; everything else is local-only.
+library/*.md
+!library/*.template.md
+!library/README.md
+
+# Private runtime config (output paths, notification bot tokens, etc).
+config.yaml
+
+# Generated outputs if the skill writes into its own folder (unusual; default
+# output path is ~/Documents/person-intel/).
+output/
+dossiers/
+
+# OS and editor cruft
+.DS_Store
+*.swp
+*~
+.vscode/
+.idea/
