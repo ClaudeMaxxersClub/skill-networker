@@ -1,0 +1,37 @@
+# Personal network graph template.
+# Copy to library/network.yaml and fill with real data.
+
+education:
+  secondary_school:
+    name: ""
+    years: ""
+    notable_alumni: []
+  university:
+    institution: ""
+    program: ""
+    graduation_year:
+    notable_classmates: []
+  exchange_programs: []
+
+employers: []
+
+accelerators: []
+
+investors: []
+
+top_50_relationships: []
+# - name: "Person Name"
+#   company: "Company"
+#   relationship: "How you know them"
+#   strength: "strong|medium|weak"
+#   can_intro_to: ["Industry", "Company"]
+
+known_bridges: []
+
+research_query_templates:
+  education:
+    - '"{target}" "{your_school}"'
+  cohorts:
+    - '"{target}" "{your_accelerator}"'
+  employers:
+    - '"{target}" "{your_company}"'
